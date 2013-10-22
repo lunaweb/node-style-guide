@@ -1,4 +1,4 @@
-# Node.js Style Guide
+# Javascript Style Guide
 
 This is a guide for writing consistent and aesthetically pleasing node.js code.
 It is inspired by what is popular within the community, and flavored with some
@@ -77,17 +77,17 @@ if (true)
 
 Also, notice the use of whitespace before and after the condition statement.
 
-## Declare one variable per var statement
+## Declare multiples variables with one var statement
 
-Declare one variable per var statement, it makes it easier to re-order the
-lines. Ignore [Crockford][crockfordconvention] on this, and put those
+Use one var statement for multiples variables for more readability.  
+Ignore [Crockford][crockfordconvention] on this, and put those
 declarations wherever they make sense.
 
 *Right:*
 
 ```js
-var keys   = ['foo', 'bar'];
-var values = [23, 42];
+var keys   = ['foo', 'bar'],
+    values = [23, 42];
 
 var object = {};
 while (items.length) {
@@ -99,10 +99,10 @@ while (items.length) {
 *Wrong:*
 
 ```js
-var keys = ['foo', 'bar'],
-    values = [23, 42],
-    object = {},
-    key;
+var keys = ['foo', 'bar'];
+var values = [23, 42];
+var object = {};
+var key;
 
 while (items.length) {
   key = keys.pop();
